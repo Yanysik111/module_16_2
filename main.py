@@ -17,4 +17,4 @@ async def ident(user_id: Annotated[int, Path(ge=1, le=100, description='Enter Us
 @app.get('/user/{username}/{age}')
 async def users_inform(username: Annotated[str, Path(ge= 5, le=20, description='Enter username', example= 'UrbanUser')],
                        age: Annotated[int, Path(ge=18, le=120, description='Enter age', example= '24')]) -> dict:
-    return {'massage':f'Информация о пользователе. Имя: {username}, Возраст: {age}.'}
+    return {'message':f'Информация о пользователе. Имя: {username}, Возраст: {age}.'}
